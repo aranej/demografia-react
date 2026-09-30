@@ -1,16 +1,21 @@
 :root {
-  --bg: #0f1115;
-  --surface: #171a21;
-  --border: rgba(255, 255, 255, 0.09);
-  --text: #e7e9ee;
-  --muted: #8b93a1;
+  --bg: #08090a;
+  --surface: rgba(255, 255, 255, 0.035);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --text: #ededed;
+  --muted: #8a8f98;
+  --accent: #b6f24a;
+}
+
+html {
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv11', 'ss01';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg);
@@ -21,13 +26,26 @@ body {
   box-sizing: border-box;
 }
 
-.recharts-bar-rectangle {
-  cursor: pointer;
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}
+
+.recharts-surface:focus,
+.recharts-wrapper:focus {
+  outline: none;
 }
 
 /* Annotation labels overlap on narrow screens; the dashed lines stay. */
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .recharts-reference-line text {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }
