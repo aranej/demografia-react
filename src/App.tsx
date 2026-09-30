@@ -1,220 +1,261 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import {
   ResponsiveContainer,
   ComposedChart,
   Bar,
+  Cell,
   Line,
   XAxis,
   YAxis,
   Tooltip,
-  Legend as RechartsLegend,
+  Legend,
   CartesianGrid,
   ReferenceLine
 } from 'recharts';
 import { birthData } from './data/birthData';
+import { annotations } from './data/annotations';
 import InfoCard from './components/InfoCard';
-import ChartAnnotation, { annotations } from './components/ChartAnnotation';
 import TrendExplanation from './components/TrendExplanation';
 
-const AppContainer = styled.div`
+const BAR = '#4fb3a9';
+const BAR_ACTIVE = '#7fd6cc';
+const RATE = '#e8b04a';
+const TFR = '#e0705f';
+
+const Page = styled.main`
   min-height: 100vh;
-  background-color: #111111;
-  padding: 2rem;
-  color: rgba(255, 255, 255, 0.9);
+  padding: 2rem 1rem 3rem;
+`;
+
+const Wrap = styled.div`
+  max-width: 1100px;
+  margin: 0 auto;
+`;
+
+const Header = styled.header`
+  margin-bottom: 1.5rem;
 `;
 
 const Title = styled.h1`
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
 `;
 
-const ChartContainer = styled.div`
-  height: 600px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+const Subtitle = styled.p`
+  margin: 0;
+  color: var(--muted);
 `;
 
-const InfoSection = styled.div`
-  max-width: 1200px;
-  margin: 2rem auto;
+const Summary = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+`;
+
+const SummaryCard = styled.div`
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+`;
+
+const SummaryLabel = styled.div`
+  color: var(--muted);
+  font-size: 0.85rem;
+`;
+
+const SummaryValue = styled.div`
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+`;
+
+const SummaryNote = styled.div`
+  color: var(--muted);
+  font-size: 0.85rem;
+`;
+
+const ChartCard = styled.section`
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+`;
+
+const ChartBox = styled.div`
+  height: 440px;
+`;
+
+const ChartHint = styled.p`
+  margin: 0.5rem 1rem 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+`;
+
+const Details = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 `;
 
-const LegendContainer = styled.div`
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+const Footer = styled.footer`
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
 `;
 
-const LegendItem = styled.div`
-  margin: 0.5rem 0;
-  color: rgba(255, 255, 255, 0.8);
+const TooltipBox = styled.div`
+  background: #0d0f13;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
 `;
 
 const CustomTooltip = ({ active, payload, label }: any) => {
-  if (active && payload && payload.length) {
-    return (
-      <div style={{
-        background: 'rgba(0, 0, 0, 0.8)',
-        border: '1px solid rgba(255, 255, 255, 0.2)',
-        padding: '1rem',
-        borderRadius: '8px',
-      }}>
-        <p style={{ color: 'white', margin: '0' }}>{`Rok: ${label}`}</p>
-        <p style={{ color: '#00ffff', margin: '0.5rem 0' }}>
-          {`Živonarodení: ${payload[0].value.toLocaleString()}`}
-        </p>
-        <p style={{ color: '#ff00ff', margin: '0.5rem 0' }}>
-          {`Miera pôrodnosti: ${payload[1].value}‰`}
-        </p>
-        <p style={{ color: '#ffff00', margin: '0' }}>
-          {`TFR: ${payload[2].value}`}
-        </p>
-      </div>
-    );
-  }
-  return null;
+  if (!active || !payload || !payload.length) return null;
+  const row = payload[0].payload;
+  return (
+    <TooltipBox>
+      <strong>{label}</strong>
+      <div style={{ color: BAR }}>Živonarodení: {row.zivonarodeni.toLocaleString('sk-SK')}</div>
+      <div style={{ color: RATE }}>Miera: {row.miera} ‰</div>
+      <div style={{ color: TFR }}>TFR: {row.tfr.toFixed(2)}</div>
+    </TooltipBox>
+  );
 };
 
-const App: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
-  const chartRef = useRef<HTMLDivElement>(null);
-  const [chartDimensions, setChartDimensions] = useState({ width: 0, height: 0 });
+const first = birthData[0];
+const last = birthData[birthData.length - 1];
+const peak = birthData.reduce((a, b) => (b.zivonarodeni > a.zivonarodeni ? b : a));
+const drop = Math.round((1 - last.zivonarodeni / peak.zivonarodeni) * 100);
 
-  const handleBarClick = (data: any) => {
-    setSelectedYear(data.rok);
+const App: React.FC = () => {
+  const [selectedYear, setSelectedYear] = useState<number>(last.rok);
+
+  const handleChartClick = (state: any) => {
+    const year = Number(state?.activeLabel);
+    if (!Number.isNaN(year) && birthData.some(d => d.rok === year)) {
+      setSelectedYear(year);
+    }
   };
 
+  const selected = birthData.find(d => d.rok === selectedYear) ?? last;
+
   return (
-    <AppContainer>
-      <Title>Pôrodnosť na Slovensku 1970-2023</Title>
-      
-      <ChartContainer ref={chartRef}>
-        <ResponsiveContainer width="100%" height={500}>
-          <ComposedChart
-            data={birthData}
-            margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-            <XAxis dataKey="rok" stroke="rgba(255,255,255,0.7)" />
-            <YAxis 
-              yAxisId="left" 
-              stroke="rgba(255,255,255,0.7)"
-              label={{ 
-                value: 'Počet živonarodených',
-                angle: -90,
-                position: 'insideLeft',
-                style: { fill: 'rgba(255, 255, 255, 0.7)' }
-              }}
-            />
-            <YAxis 
-              yAxisId="right" 
-              orientation="right" 
-              stroke="rgba(255,255,255,0.7)"
-              label={{ 
-                value: 'Miera pôrodnosti / TFR',
-                angle: 90,
-                position: 'insideRight',
-                style: { fill: 'rgba(255, 255, 255, 0.7)' }
-              }}
-            />
-            
-            <Tooltip
-              contentStyle={{
-                backgroundColor: 'rgba(0,0,0,0.8)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                borderRadius: '8px'
-              }}
-              labelStyle={{ color: 'rgba(255,255,255,0.9)' }}
-            />
-            
-            <RechartsLegend
-              wrapperStyle={{
-                paddingTop: '20px',
-                color: 'rgba(255,255,255,0.7)'
-              }}
-            />
+    <Page>
+      <Wrap>
+        <Header>
+          <Title>Pôrodnosť na Slovensku {first.rok}–{last.rok}</Title>
+          <Subtitle>Počet živonarodených, hrubá miera pôrodnosti a celková plodnosť (TFR)</Subtitle>
+        </Header>
 
-            <Bar
-              dataKey="zivonarodeni"
-              name="Počet živonarodených"
-              fill="rgba(0, 255, 255, 0.6)"
-              yAxisId="left"
-              onClick={handleBarClick}
-            />
-            
-            <Line
-              type="monotone"
-              dataKey="miera"
-              name="Hrubá miera pôrodnosti (‰)"
-              stroke="rgba(255, 0, 255, 0.8)"
-              yAxisId="right"
-              dot={false}
-            />
-            
-            <Line
-              type="monotone"
-              dataKey="tfr"
-              name="Celková plodnosť (TFR)"
-              stroke="rgba(255, 255, 0, 0.8)"
-              yAxisId="right"
-              dot={false}
-            />
+        <Summary>
+          <SummaryCard>
+            <SummaryLabel>Vrchol ({peak.rok})</SummaryLabel>
+            <SummaryValue>{peak.zivonarodeni.toLocaleString('sk-SK')}</SummaryValue>
+            <SummaryNote>živonarodených</SummaryNote>
+          </SummaryCard>
+          <SummaryCard>
+            <SummaryLabel>Posledný rok ({last.rok})</SummaryLabel>
+            <SummaryValue>{last.zivonarodeni.toLocaleString('sk-SK')}</SummaryValue>
+            <SummaryNote>živonarodených</SummaryNote>
+          </SummaryCard>
+          <SummaryCard>
+            <SummaryLabel>Zmena od vrcholu</SummaryLabel>
+            <SummaryValue>−{drop} %</SummaryValue>
+            <SummaryNote>TFR {last.tfr.toFixed(2)} (z {peak.tfr.toFixed(2)})</SummaryNote>
+          </SummaryCard>
+        </Summary>
 
-            {annotations.map(annotation => (
-              <ReferenceLine
-                key={annotation.year}
-                x={annotation.year}
-                stroke={annotation.color}
-                strokeDasharray="3 3"
-                yAxisId="left"
-              />
-            ))}
-          </ComposedChart>
-        </ResponsiveContainer>
+        <ChartCard>
+          <ChartBox>
+            <ResponsiveContainer width="100%" height="100%">
+              <ComposedChart
+                data={birthData}
+                margin={{ top: 24, right: 12, bottom: 8, left: 4 }}
+                onClick={handleChartClick}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" />
+                <XAxis dataKey="rok" stroke="#8b93a1" tick={{ fontSize: 12 }} />
+                <YAxis
+                  yAxisId="left"
+                  stroke="#8b93a1"
+                  tick={{ fontSize: 12 }}
+                  tickFormatter={(v: number) => `${v / 1000} tis.`}
+                  width={56}
+                />
+                <YAxis
+                  yAxisId="right"
+                  orientation="right"
+                  stroke="#8b93a1"
+                  tick={{ fontSize: 12 }}
+                  domain={[0, 20]}
+                  width={32}
+                />
+                <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.05)' }} />
+                <Legend wrapperStyle={{ paddingTop: 8, fontSize: 13 }} />
 
-        {annotations.map(annotation => {
-          const yearData = birthData.find(d => d.rok === annotation.year);
-          if (!yearData || !chartRef.current) return null;
+                <Bar dataKey="zivonarodeni" name="Živonarodení" yAxisId="left" fill={BAR} radius={[3, 3, 0, 0]}>
+                  {birthData.map(d => (
+                    <Cell key={d.rok} fill={d.rok === selectedYear ? BAR_ACTIVE : BAR} fillOpacity={d.rok === selectedYear ? 1 : 0.75} />
+                  ))}
+                </Bar>
+                <Line
+                  type="monotone"
+                  dataKey="miera"
+                  name="Hrubá miera pôrodnosti (‰)"
+                  stroke={RATE}
+                  strokeWidth={2}
+                  yAxisId="right"
+                  dot={false}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="tfr"
+                  name="Celková plodnosť (TFR)"
+                  stroke={TFR}
+                  strokeWidth={2}
+                  yAxisId="right"
+                  dot={false}
+                />
 
-          const chartRect = chartRef.current.getBoundingClientRect();
-          const xPos = (annotation.year - 1970) / (2023 - 1970) * chartRect.width;
-          const yPos = 50; // Fixed position from top
+                {annotations.map(a => (
+                  <ReferenceLine
+                    key={a.year}
+                    x={a.year}
+                    yAxisId="left"
+                    stroke={a.color}
+                    strokeDasharray="4 4"
+                    strokeOpacity={0.6}
+                    label={{ value: a.label, position: 'top', fill: a.color, fontSize: 11 }}
+                  />
+                ))}
+              </ComposedChart>
+            </ResponsiveContainer>
+          </ChartBox>
+          <ChartHint>
+            Kliknutím na stĺpec zobrazíš detail roku. Do roku 1990 sú údaje po piatich rokoch, odvtedy ročne.
+          </ChartHint>
+        </ChartCard>
 
-          return (
-            <ChartAnnotation
-              key={annotation.year}
-              x={xPos}
-              y={yPos}
-              text={annotation.text}
-              color={annotation.color}
-            />
-          );
-        })}
-      </ChartContainer>
+        <Details>
+          <TrendExplanation />
+          <InfoCard data={selected} />
+        </Details>
 
-      <TrendExplanation />
-
-      {selectedYear && (
-        <InfoCard
-          data={birthData.find(d => d.rok === selectedYear)!}
-        />
-      )}
-    </AppContainer>
+        <Footer>
+          Údaje v tomto projekte pôvodne vygeneroval jazykový model a nie sú overené voči oficiálnym štatistikám
+          (ŠÚ SR). Projekt slúži ako experiment s kódovaním pomocou LLM a s automatickým nasadením cez GitHub a Vercel.
+        </Footer>
+      </Wrap>
+    </Page>
   );
 };
 
