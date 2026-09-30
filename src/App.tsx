@@ -1,221 +1,192 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
+import StatTile from './components/StatTile';
+import MetricExplorer from './components/MetricExplorer';
+import NaturalChange from './components/NaturalChange';
+import Eras from './components/Eras';
 import {
-  ResponsiveContainer,
-  ComposedChart,
-  Bar,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend as RechartsLegend,
-  CartesianGrid,
-  ReferenceLine
-} from 'recharts';
-import { birthData } from './data/birthData';
-import InfoCard from './components/InfoCard';
-import ChartAnnotation, { annotations } from './components/ChartAnnotation';
-import TrendExplanation from './components/TrendExplanation';
+  nf,
+  dec,
+  peak,
+  latest,
+  latestWithTfr,
+  latestWithAge,
+  youngestMotherYear,
+  dropFromPeak,
+  belowReplacementSince,
+  naturalDecreaseSince,
+  naturalChangeLatest,
+  first,
+  REPLACEMENT_TFR
+} from './data/derived';
 
-const AppContainer = styled.div`
-  min-height: 100vh;
-  background-color: #111111;
-  padding: 2rem;
-  color: rgba(255, 255, 255, 0.9);
+const Page = styled.main`
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1rem 4rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    width: 900px;
+    height: 600px;
+    transform: translateX(-50%);
+    background: radial-gradient(closest-side, rgba(182, 242, 74, 0.14), transparent);
+    pointer-events: none;
+  }
 `;
 
-const Title = styled.h1`
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2rem;
-  font-size: 2rem;
-`;
-
-const ChartContainer = styled.div`
-  height: 600px;
-  width: 100%;
-  max-width: 1200px;
+const Wrap = styled.div`
+  position: relative;
+  max-width: 1120px;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-`;
-
-const InfoSection = styled.div`
-  max-width: 1200px;
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 `;
 
-const LegendContainer = styled.div`
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+const Hero = styled.header`
+  padding: 1rem 0 2rem;
 `;
 
-const LegendItem = styled.div`
-  margin: 0.5rem 0;
-  color: rgba(255, 255, 255, 0.8);
-`;
+const Eyebrow = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
 
-const CustomTooltip = ({ active, payload, label }: any) => {
-  if (active && payload && payload.length) {
-    return (
-      <div style={{
-        background: 'rgba(0, 0, 0, 0.8)',
-        border: '1px solid rgba(255, 255, 255, 0.2)',
-        padding: '1rem',
-        borderRadius: '8px',
-      }}>
-        <p style={{ color: 'white', margin: '0' }}>{`Rok: ${label}`}</p>
-        <p style={{ color: '#00ffff', margin: '0.5rem 0' }}>
-          {`Živonarodení: ${payload[0].value.toLocaleString()}`}
-        </p>
-        <p style={{ color: '#ff00ff', margin: '0.5rem 0' }}>
-          {`Miera pôrodnosti: ${payload[1].value}‰`}
-        </p>
-        <p style={{ color: '#ffff00', margin: '0' }}>
-          {`TFR: ${payload[2].value}`}
-        </p>
-      </div>
-    );
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
   }
-  return null;
-};
+`;
 
-const App: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
-  const chartRef = useRef<HTMLDivElement>(null);
-  const [chartDimensions, setChartDimensions] = useState({ width: 0, height: 0 });
+const Title = styled.h1`
+  margin: 1.25rem 0 0.5rem;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  text-wrap: balance;
+`;
 
-  const handleBarClick = (data: any) => {
-    setSelectedYear(data.rok);
-  };
+const Big = styled.span`
+  background: linear-gradient(180deg, #ffffff 10%, var(--accent) 120%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+`;
 
-  return (
-    <AppContainer>
-      <Title>Pôrodnosť na Slovensku 1970-2023</Title>
-      
-      <ChartContainer ref={chartRef}>
-        <ResponsiveContainer width="100%" height={500}>
-          <ComposedChart
-            data={birthData}
-            margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-            <XAxis dataKey="rok" stroke="rgba(255,255,255,0.7)" />
-            <YAxis 
-              yAxisId="left" 
-              stroke="rgba(255,255,255,0.7)"
-              label={{ 
-                value: 'Počet živonarodených',
-                angle: -90,
-                position: 'insideLeft',
-                style: { fill: 'rgba(255, 255, 255, 0.7)' }
-              }}
-            />
-            <YAxis 
-              yAxisId="right" 
-              orientation="right" 
-              stroke="rgba(255,255,255,0.7)"
-              label={{ 
-                value: 'Miera pôrodnosti / TFR',
-                angle: 90,
-                position: 'insideRight',
-                style: { fill: 'rgba(255, 255, 255, 0.7)' }
-              }}
-            />
-            
-            <Tooltip
-              contentStyle={{
-                backgroundColor: 'rgba(0,0,0,0.8)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                borderRadius: '8px'
-              }}
-              labelStyle={{ color: 'rgba(255,255,255,0.9)' }}
-            />
-            
-            <RechartsLegend
-              wrapperStyle={{
-                paddingTop: '20px',
-                color: 'rgba(255,255,255,0.7)'
-              }}
-            />
+const Lead = styled.p`
+  margin: 0;
+  max-width: 640px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.6;
+`;
 
-            <Bar
-              dataKey="zivonarodeni"
-              name="Počet živonarodených"
-              fill="rgba(0, 255, 255, 0.6)"
-              yAxisId="left"
-              onClick={handleBarClick}
-            />
-            
-            <Line
-              type="monotone"
-              dataKey="miera"
-              name="Hrubá miera pôrodnosti (‰)"
-              stroke="rgba(255, 0, 255, 0.8)"
-              yAxisId="right"
-              dot={false}
-            />
-            
-            <Line
-              type="monotone"
-              dataKey="tfr"
-              name="Celková plodnosť (TFR)"
-              stroke="rgba(255, 255, 0, 0.8)"
-              yAxisId="right"
-              dot={false}
-            />
+const Tiles = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+`;
 
-            {annotations.map(annotation => (
-              <ReferenceLine
-                key={annotation.year}
-                x={annotation.year}
-                stroke={annotation.color}
-                strokeDasharray="3 3"
-                yAxisId="left"
-              />
-            ))}
-          </ComposedChart>
-        </ResponsiveContainer>
+const SectionTitle = styled.h2`
+  margin: 2rem 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+`;
 
-        {annotations.map(annotation => {
-          const yearData = birthData.find(d => d.rok === annotation.year);
-          if (!yearData || !chartRef.current) return null;
+const Footer = styled.footer`
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.7;
 
-          const chartRect = chartRef.current.getBoundingClientRect();
-          const xPos = (annotation.year - 1970) / (2023 - 1970) * chartRect.width;
-          const yPos = 50; // Fixed position from top
+  a {
+    color: var(--text);
+    text-decoration-color: var(--border-strong);
+    text-underline-offset: 3px;
+  }
+`;
 
-          return (
-            <ChartAnnotation
-              key={annotation.year}
-              x={xPos}
-              y={yPos}
-              text={annotation.text}
-              color={annotation.color}
-            />
-          );
-        })}
-      </ChartContainer>
+const App: React.FC = () => (
+  <Page>
+    <Wrap>
+      <Hero>
+        <Eyebrow>Demografia · Slovensko · {first.rok}–{latest.rok}</Eyebrow>
+        <Title>
+          Pôrodnosť na Slovensku: <Big>−{dropFromPeak}&nbsp;%</Big> od vrcholu
+        </Title>
+        <Lead>
+          V roku {peak.rok} sa narodilo {nf.format(peak.zivonarodeni)} detí, v roku {latest.rok} už len{' '}
+          {nf.format(latest.zivonarodeni)}. Takto vyzerá šesť desaťročí vývoja v číslach.
+        </Lead>
+      </Hero>
 
-      <TrendExplanation />
-
-      {selectedYear && (
-        <InfoCard
-          data={birthData.find(d => d.rok === selectedYear)!}
+      <Tiles>
+        <StatTile
+          label={`Narodení ${latest.rok}`}
+          value={nf.format(latest.zivonarodeni)}
+          note={`Vrchol bol v roku ${peak.rok}: ${nf.format(peak.zivonarodeni)} detí.`}
+          accent="#b6f24a"
         />
-      )}
-    </AppContainer>
-  );
-};
+        <StatTile
+          label={`Plodnosť (TFR) ${latestWithTfr.rok}`}
+          value={dec(latestWithTfr.tfr!, 2)}
+          note={`Na udržanie počtu obyvateľov treba približne ${dec(REPLACEMENT_TFR, 1)}. Pod touto hranicou sme od roku ${belowReplacementSince}.`}
+          accent="#8b9bff"
+        />
+        <StatTile
+          label={`Vek matky pri pôrode ${latestWithAge.rok}`}
+          value={`${dec(latestWithAge.vekMatky!)} r.`}
+          note={`V roku ${youngestMotherYear.rok} to bolo ${dec(youngestMotherYear.vekMatky!)} roka.`}
+          accent="#5eead4"
+        />
+        <StatTile
+          label={`Prirodzený úbytok ${latest.rok}`}
+          value={`−${nf.format(Math.abs(naturalChangeLatest))}`}
+          note={`Od roku ${naturalDecreaseSince} zomiera ročne viac ľudí, než sa narodí.`}
+          accent="#ff7a59"
+        />
+      </Tiles>
+
+      <SectionTitle>Preskúmaj ukazovatele</SectionTitle>
+      <MetricExplorer />
+
+      <NaturalChange />
+
+      <SectionTitle>Šesť období</SectionTitle>
+      <Eras />
+
+      <Footer>
+        <div>
+          Zdroj: Eurostat, tabuľky <code>demo_gind</code> a <code>demo_find</code> (pôvodné dáta Štatistického úradu SR),
+          stiahnuté 30. 9. 2026. Údaje za rok {latest.rok} sú najnovšie dostupné (Eurostat, aktualizované 21. 7. 2026) a môžu sa
+          ešte upraviť. TFR a vek matky za {latest.rok} zatiaľ nie sú zverejnené.
+        </div>
+        <div>
+          TFR = celková plodnosť, priemerný počet detí na ženu pri dnešných vekových mierach plodnosti. Hrubá miera
+          pôrodnosti = živonarodení na 1 000 obyvateľov.
+        </div>
+      </Footer>
+    </Wrap>
+  </Page>
+);
 
 export default App;
