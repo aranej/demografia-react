@@ -154,7 +154,7 @@ const App: React.FC = () => (
         />
         <StatTile
           label={`Vek matky pri pôrode ${latestWithAge.rok}`}
-          value={`${dec(latestWithAge.vekMatky!)} r.`}
+          value={`${dec(latestWithAge.vekMatky!)} roka`}
           note={`V roku ${youngestMotherYear.rok} to bolo ${dec(youngestMotherYear.vekMatky!)} roka.`}
           accent="#5eead4"
         />
