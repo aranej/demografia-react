@@ -6,6 +6,7 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 
 export const COUNTRY_CODES = ['SK', 'CZ', 'PL', 'HU', 'EU27_2020'];
 export const METRICS = {
@@ -102,7 +103,6 @@ export async function refreshCountries() {
   }
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL('file:///' +
-    process.argv[1].replaceAll('\\', '/')))) {
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   refreshCountries().catch(error => { console.error(error.message); process.exitCode = 1; });
 }
