@@ -2,7 +2,7 @@
 
 Plán rozšírenia stránky. **Pred prácou si prečítaj [AGENTS.md](AGENTS.md)**: obsahuje postup (vetva → PR → preview → merge), pravidlá pre dáta a limity Vercel free plánu. Tento dokument hovorí, *čo* robiť. AGENTS.md hovorí, *ako*.
 
-Posledná aktualizácia: 2026-09-30 (stav: v1 nasadená, 1960–2025, PR-only `main`).
+Posledná aktualizácia: 2026-10-01 (stav: v1 nasadená, R1 implementovaná v PR #4; merge čaká na vlastníka, PR-only `main`).
 
 ## Ako roadmap používať
 
@@ -26,7 +26,7 @@ Stavy: `TODO` · `IN PROGRESS` · `DONE` · `BLOCKED` (s dôvodom).
 
 | ID | Položka | Priorita | Stav |
 |---|---|---|---|
-| R1 | Porovnanie krajín | P1 | TODO |
+| R1 | Porovnanie krajín | P1 | DONE |
 | R2 | Automatická aktualizácia dát (GitHub Action) | P1 | TODO |
 | R3 | Narodení podľa veku matky | P2 | TODO |
 | R4 | Populačná pyramída po rokoch | P2 | TODO |
@@ -40,6 +40,10 @@ Odporúčané poradie: **R1 → R2 → R3/R4 → ostatné**. R1 a R2 dávajú na
 ---
 
 ## R1: Porovnanie krajín (P1)
+
+**Stav: DONE — implementácia v [PR #4](https://github.com/aranej/demografia-react/pull/4), produkčný merge čaká na pokyn vlastníka.**
+
+Overené 2026-10-01: všetkých 15 zdrojových radov; 4 testy importéra a 8 aplikačných/dátových testov; `CI=true` build; Vercel preview `READY`; desktop a mobil 375 px, prepínače, tabuľka, konzola bez chýb. Poradie používa spoločný rok vybraných krajín. Snapshot krajín má približne 3,9 kB gzip; opakovaný import je identický.
 
 **Cieľ:** Ukázať, či je slovenský vývoj výnimočný. Porovnať SK s CZ, PL, HU a priemerom EÚ.
 

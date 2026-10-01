@@ -1,0 +1,2565 @@
+{
+  "downloadedOn": "2026-10-01",
+  "sources": [
+    {
+      "country": "SK",
+      "metric": "tfr",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=SK&indic_de=TOTFERRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "SK",
+      "metric": "birthRate",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?freq=A&geo=SK&indic_de=GBIRTHRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Population change - Demographic balance and crude rates at national level"
+    },
+    {
+      "country": "SK",
+      "metric": "motherAge",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=SK&indic_de=AGEMOTH&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "CZ",
+      "metric": "tfr",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=CZ&indic_de=TOTFERRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "CZ",
+      "metric": "birthRate",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?freq=A&geo=CZ&indic_de=GBIRTHRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Population change - Demographic balance and crude rates at national level"
+    },
+    {
+      "country": "CZ",
+      "metric": "motherAge",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=CZ&indic_de=AGEMOTH&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "PL",
+      "metric": "tfr",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=PL&indic_de=TOTFERRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "PL",
+      "metric": "birthRate",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?freq=A&geo=PL&indic_de=GBIRTHRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Population change - Demographic balance and crude rates at national level"
+    },
+    {
+      "country": "PL",
+      "metric": "motherAge",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=PL&indic_de=AGEMOTH&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "HU",
+      "metric": "tfr",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=HU&indic_de=TOTFERRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "HU",
+      "metric": "birthRate",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?freq=A&geo=HU&indic_de=GBIRTHRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Population change - Demographic balance and crude rates at national level"
+    },
+    {
+      "country": "HU",
+      "metric": "motherAge",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=HU&indic_de=AGEMOTH&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "EU27_2020",
+      "metric": "tfr",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=EU27_2020&indic_de=TOTFERRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    },
+    {
+      "country": "EU27_2020",
+      "metric": "birthRate",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?freq=A&geo=EU27_2020&indic_de=GBIRTHRT&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Population change - Demographic balance and crude rates at national level"
+    },
+    {
+      "country": "EU27_2020",
+      "metric": "motherAge",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&geo=EU27_2020&indic_de=AGEMOTH&sinceTimePeriod=1960&format=JSON&lang=EN",
+      "updated": "2026-09-30T23:00:00+0200",
+      "label": "Fertility indicators"
+    }
+  ],
+  "countries": [
+    {
+      "code": "SK",
+      "rows": [
+        {
+          "year": 1960,
+          "tfr": 3.04,
+          "birthRate": 21.7,
+          "motherAge": 26.8,
+          "flags": {}
+        },
+        {
+          "year": 1961,
+          "tfr": 2.96,
+          "birthRate": 20.8,
+          "motherAge": 26.7,
+          "flags": {}
+        },
+        {
+          "year": 1962,
+          "tfr": 2.83,
+          "birthRate": 19.8,
+          "motherAge": 26.6,
+          "flags": {}
+        },
+        {
+          "year": 1963,
+          "tfr": 2.92,
+          "birthRate": 20.4,
+          "motherAge": 26.8,
+          "flags": {}
+        },
+        {
+          "year": 1964,
+          "tfr": 2.89,
+          "birthRate": 20.1,
+          "motherAge": 26.9,
+          "flags": {}
+        },
+        {
+          "year": 1965,
+          "tfr": 2.78,
+          "birthRate": 19.3,
+          "motherAge": 26.8,
+          "flags": {}
+        },
+        {
+          "year": 1966,
+          "tfr": 2.66,
+          "birthRate": 18.5,
+          "motherAge": 26.6,
+          "flags": {}
+        },
+        {
+          "year": 1967,
+          "tfr": 2.48,
+          "birthRate": 17.4,
+          "motherAge": 26.5,
+          "flags": {}
+        },
+        {
+          "year": 1968,
+          "tfr": 2.39,
+          "birthRate": 17,
+          "motherAge": 26.4,
+          "flags": {}
+        },
+        {
+          "year": 1969,
+          "tfr": 2.43,
+          "birthRate": 17.7,
+          "motherAge": 26.3,
+          "flags": {}
+        },
+        {
+          "year": 1970,
+          "tfr": 2.41,
+          "birthRate": 17.8,
+          "motherAge": 26.2,
+          "flags": {}
+        },
+        {
+          "year": 1971,
+          "tfr": 2.43,
+          "birthRate": 18.2,
+          "motherAge": 26.2,
+          "flags": {}
+        },
+        {
+          "year": 1972,
+          "tfr": 2.49,
+          "birthRate": 19.1,
+          "motherAge": 26.1,
+          "flags": {}
+        },
+        {
+          "year": 1973,
+          "tfr": 2.56,
+          "birthRate": 20,
+          "motherAge": 26.1,
+          "flags": {}
+        },
+        {
+          "year": 1974,
+          "tfr": 2.61,
+          "birthRate": 20.8,
+          "motherAge": 25.9,
+          "flags": {}
+        },
+        {
+          "year": 1975,
+          "tfr": 2.55,
+          "birthRate": 20.6,
+          "motherAge": 25.7,
+          "flags": {}
+        },
+        {
+          "year": 1976,
+          "tfr": 2.55,
+          "birthRate": 20.8,
+          "motherAge": 25.6,
+          "flags": {}
+        },
+        {
+          "year": 1977,
+          "tfr": 2.49,
+          "birthRate": 20.6,
+          "motherAge": 25.5,
+          "flags": {}
+        },
+        {
+          "year": 1978,
+          "tfr": 2.47,
+          "birthRate": 20.5,
+          "motherAge": 25.4,
+          "flags": {}
+        },
+        {
+          "year": 1979,
+          "tfr": 2.45,
+          "birthRate": 20.3,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1980,
+          "tfr": 2.32,
+          "birthRate": 19.1,
+          "motherAge": 25.2,
+          "flags": {}
+        },
+        {
+          "year": 1981,
+          "tfr": 2.29,
+          "birthRate": 18.6,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1982,
+          "tfr": 2.28,
+          "birthRate": 18.3,
+          "motherAge": 25.1,
+          "flags": {}
+        },
+        {
+          "year": 1983,
+          "tfr": 2.28,
+          "birthRate": 18.1,
+          "motherAge": 25.1,
+          "flags": {}
+        },
+        {
+          "year": 1984,
+          "tfr": 2.26,
+          "birthRate": 17.7,
+          "motherAge": 25.1,
+          "flags": {}
+        },
+        {
+          "year": 1985,
+          "tfr": 2.26,
+          "birthRate": 17.5,
+          "motherAge": 25.1,
+          "flags": {}
+        },
+        {
+          "year": 1986,
+          "tfr": 2.2,
+          "birthRate": 16.8,
+          "motherAge": 25.2,
+          "flags": {}
+        },
+        {
+          "year": 1987,
+          "tfr": 2.14,
+          "birthRate": 16.1,
+          "motherAge": 25.2,
+          "flags": {}
+        },
+        {
+          "year": 1988,
+          "tfr": 2.13,
+          "birthRate": 15.9,
+          "motherAge": 25.2,
+          "flags": {}
+        },
+        {
+          "year": 1989,
+          "tfr": 2.07,
+          "birthRate": 15.2,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1990,
+          "tfr": 2.09,
+          "birthRate": 15.1,
+          "motherAge": 25.1,
+          "flags": {}
+        },
+        {
+          "year": 1991,
+          "tfr": 2.05,
+          "birthRate": 14.8,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1992,
+          "tfr": 1.93,
+          "birthRate": 14.1,
+          "motherAge": 25.1,
+          "flags": {}
+        },
+        {
+          "year": 1993,
+          "tfr": 1.87,
+          "birthRate": 13.8,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1994,
+          "tfr": 1.67,
+          "birthRate": 12.4,
+          "motherAge": 25.4,
+          "flags": {}
+        },
+        {
+          "year": 1995,
+          "tfr": 1.52,
+          "birthRate": 11.5,
+          "motherAge": 25.6,
+          "flags": {}
+        },
+        {
+          "year": 1996,
+          "tfr": 1.47,
+          "birthRate": 11.2,
+          "motherAge": 25.8,
+          "flags": {}
+        },
+        {
+          "year": 1997,
+          "tfr": 1.43,
+          "birthRate": 11,
+          "motherAge": 26,
+          "flags": {}
+        },
+        {
+          "year": 1998,
+          "tfr": 1.37,
+          "birthRate": 10.7,
+          "motherAge": 26.2,
+          "flags": {}
+        },
+        {
+          "year": 1999,
+          "tfr": 1.33,
+          "birthRate": 10.4,
+          "motherAge": 26.4,
+          "flags": {}
+        },
+        {
+          "year": 2000,
+          "tfr": 1.3,
+          "birthRate": 10.2,
+          "motherAge": 26.6,
+          "flags": {}
+        },
+        {
+          "year": 2001,
+          "tfr": 1.2,
+          "birthRate": 9.5,
+          "motherAge": 26.8,
+          "flags": {}
+        },
+        {
+          "year": 2002,
+          "tfr": 1.19,
+          "birthRate": 9.5,
+          "motherAge": 27,
+          "flags": {}
+        },
+        {
+          "year": 2003,
+          "tfr": 1.2,
+          "birthRate": 9.6,
+          "motherAge": 27.3,
+          "flags": {}
+        },
+        {
+          "year": 2004,
+          "tfr": 1.25,
+          "birthRate": 10,
+          "motherAge": 27.4,
+          "flags": {}
+        },
+        {
+          "year": 2005,
+          "tfr": 1.27,
+          "birthRate": 10.1,
+          "motherAge": 27.7,
+          "flags": {}
+        },
+        {
+          "year": 2006,
+          "tfr": 1.25,
+          "birthRate": 10,
+          "motherAge": 27.9,
+          "flags": {}
+        },
+        {
+          "year": 2007,
+          "tfr": 1.27,
+          "birthRate": 10.1,
+          "motherAge": 28.1,
+          "flags": {}
+        },
+        {
+          "year": 2008,
+          "tfr": 1.34,
+          "birthRate": 10.7,
+          "motherAge": 28.3,
+          "flags": {}
+        },
+        {
+          "year": 2009,
+          "tfr": 1.44,
+          "birthRate": 11.4,
+          "motherAge": 28.5,
+          "flags": {}
+        },
+        {
+          "year": 2010,
+          "tfr": 1.43,
+          "birthRate": 11.2,
+          "motherAge": 28.6,
+          "flags": {}
+        },
+        {
+          "year": 2011,
+          "tfr": 1.45,
+          "birthRate": 11.3,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2012,
+          "tfr": 1.34,
+          "birthRate": 10.3,
+          "motherAge": 28.7,
+          "flags": {}
+        },
+        {
+          "year": 2013,
+          "tfr": 1.34,
+          "birthRate": 10.1,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2014,
+          "tfr": 1.37,
+          "birthRate": 10.2,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2015,
+          "tfr": 1.4,
+          "birthRate": 10.3,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2016,
+          "tfr": 1.48,
+          "birthRate": 10.6,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2017,
+          "tfr": 1.52,
+          "birthRate": 10.7,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2018,
+          "tfr": 1.54,
+          "birthRate": 10.6,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2019,
+          "tfr": 1.57,
+          "birthRate": 10.5,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2020,
+          "tfr": 1.59,
+          "birthRate": 10.4,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2021,
+          "tfr": 1.63,
+          "birthRate": 10.4,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2022,
+          "tfr": 1.57,
+          "birthRate": 9.7,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2023,
+          "tfr": 1.49,
+          "birthRate": 9,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2024,
+          "tfr": 1.46,
+          "birthRate": 8.5,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2025,
+          "tfr": null,
+          "birthRate": 7.8,
+          "motherAge": null,
+          "flags": {}
+        }
+      ]
+    },
+    {
+      "code": "CZ",
+      "rows": [
+        {
+          "year": 1960,
+          "tfr": 2.09,
+          "birthRate": 13.4,
+          "motherAge": 25.7,
+          "flags": {}
+        },
+        {
+          "year": 1961,
+          "tfr": 2.11,
+          "birthRate": 13.7,
+          "motherAge": 25.6,
+          "flags": {}
+        },
+        {
+          "year": 1962,
+          "tfr": 2.12,
+          "birthRate": 13.9,
+          "motherAge": 25.5,
+          "flags": {}
+        },
+        {
+          "year": 1963,
+          "tfr": 2.31,
+          "birthRate": 15.4,
+          "motherAge": 25.7,
+          "flags": {}
+        },
+        {
+          "year": 1964,
+          "tfr": 2.34,
+          "birthRate": 15.9,
+          "motherAge": 25.8,
+          "flags": {}
+        },
+        {
+          "year": 1965,
+          "tfr": 2.18,
+          "birthRate": 15.1,
+          "motherAge": 25.5,
+          "flags": {}
+        },
+        {
+          "year": 1966,
+          "tfr": 2.02,
+          "birthRate": 14.4,
+          "motherAge": 25.2,
+          "flags": {}
+        },
+        {
+          "year": 1967,
+          "tfr": 1.91,
+          "birthRate": 14.1,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1968,
+          "tfr": 1.84,
+          "birthRate": 13.9,
+          "motherAge": 24.9,
+          "flags": {}
+        },
+        {
+          "year": 1969,
+          "tfr": 1.87,
+          "birthRate": 14.5,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1970,
+          "tfr": 1.92,
+          "birthRate": 15,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1971,
+          "tfr": 2,
+          "birthRate": 15.7,
+          "motherAge": 24.9,
+          "flags": {}
+        },
+        {
+          "year": 1972,
+          "tfr": 2.09,
+          "birthRate": 16.6,
+          "motherAge": 24.9,
+          "flags": {}
+        },
+        {
+          "year": 1973,
+          "tfr": 2.31,
+          "birthRate": 18.3,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1974,
+          "tfr": 2.46,
+          "birthRate": 19.4,
+          "motherAge": 24.9,
+          "flags": {}
+        },
+        {
+          "year": 1975,
+          "tfr": 2.43,
+          "birthRate": 19.1,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1976,
+          "tfr": 2.39,
+          "birthRate": 18.5,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1977,
+          "tfr": 2.34,
+          "birthRate": 17.8,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1978,
+          "tfr": 2.33,
+          "birthRate": 17.5,
+          "motherAge": 24.9,
+          "flags": {}
+        },
+        {
+          "year": 1979,
+          "tfr": 2.27,
+          "birthRate": 16.7,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1980,
+          "tfr": 2.08,
+          "birthRate": 14.9,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1981,
+          "tfr": 2,
+          "birthRate": 14,
+          "motherAge": 24.9,
+          "flags": {}
+        },
+        {
+          "year": 1982,
+          "tfr": 2,
+          "birthRate": 13.7,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1983,
+          "tfr": 1.97,
+          "birthRate": 13.3,
+          "motherAge": 24.5,
+          "flags": {}
+        },
+        {
+          "year": 1984,
+          "tfr": 1.97,
+          "birthRate": 13.3,
+          "motherAge": 24.5,
+          "flags": {}
+        },
+        {
+          "year": 1985,
+          "tfr": 1.95,
+          "birthRate": 13.1,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1986,
+          "tfr": 1.92,
+          "birthRate": 12.9,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1987,
+          "tfr": 1.91,
+          "birthRate": 12.7,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1988,
+          "tfr": 1.94,
+          "birthRate": 12.8,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1989,
+          "tfr": 1.87,
+          "birthRate": 12.4,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1990,
+          "tfr": 1.9,
+          "birthRate": 12.6,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1991,
+          "tfr": 1.86,
+          "birthRate": 12.5,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1992,
+          "tfr": 1.71,
+          "birthRate": 11.8,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1993,
+          "tfr": 1.67,
+          "birthRate": 11.7,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1994,
+          "tfr": 1.44,
+          "birthRate": 10.3,
+          "motherAge": 25.4,
+          "flags": {}
+        },
+        {
+          "year": 1995,
+          "tfr": 1.28,
+          "birthRate": 9.3,
+          "motherAge": 25.8,
+          "flags": {}
+        },
+        {
+          "year": 1996,
+          "tfr": 1.18,
+          "birthRate": 8.8,
+          "motherAge": 26.1,
+          "flags": {}
+        },
+        {
+          "year": 1997,
+          "tfr": 1.17,
+          "birthRate": 8.8,
+          "motherAge": 26.4,
+          "flags": {}
+        },
+        {
+          "year": 1998,
+          "tfr": 1.16,
+          "birthRate": 8.8,
+          "motherAge": 26.6,
+          "flags": {}
+        },
+        {
+          "year": 1999,
+          "tfr": 1.13,
+          "birthRate": 8.7,
+          "motherAge": 26.9,
+          "flags": {}
+        },
+        {
+          "year": 2000,
+          "tfr": 1.15,
+          "birthRate": 8.9,
+          "motherAge": 27.2,
+          "flags": {}
+        },
+        {
+          "year": 2001,
+          "tfr": 1.15,
+          "birthRate": 8.9,
+          "motherAge": 27.5,
+          "flags": {}
+        },
+        {
+          "year": 2002,
+          "tfr": 1.17,
+          "birthRate": 9.1,
+          "motherAge": 27.8,
+          "flags": {}
+        },
+        {
+          "year": 2003,
+          "tfr": 1.18,
+          "birthRate": 9.2,
+          "motherAge": 28,
+          "flags": {}
+        },
+        {
+          "year": 2004,
+          "tfr": 1.23,
+          "birthRate": 9.6,
+          "motherAge": 28.3,
+          "flags": {}
+        },
+        {
+          "year": 2005,
+          "tfr": 1.29,
+          "birthRate": 10,
+          "motherAge": 28.6,
+          "flags": {}
+        },
+        {
+          "year": 2006,
+          "tfr": 1.34,
+          "birthRate": 10.3,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2007,
+          "tfr": 1.45,
+          "birthRate": 11.1,
+          "motherAge": 29.1,
+          "flags": {}
+        },
+        {
+          "year": 2008,
+          "tfr": 1.51,
+          "birthRate": 11.5,
+          "motherAge": 29.3,
+          "flags": {}
+        },
+        {
+          "year": 2009,
+          "tfr": 1.51,
+          "birthRate": 11.3,
+          "motherAge": 29.4,
+          "flags": {}
+        },
+        {
+          "year": 2010,
+          "tfr": 1.51,
+          "birthRate": 11.2,
+          "motherAge": 29.6,
+          "flags": {}
+        },
+        {
+          "year": 2011,
+          "tfr": 1.43,
+          "birthRate": 10.4,
+          "motherAge": 29.7,
+          "flags": {}
+        },
+        {
+          "year": 2012,
+          "tfr": 1.45,
+          "birthRate": 10.3,
+          "motherAge": 29.8,
+          "flags": {}
+        },
+        {
+          "year": 2013,
+          "tfr": 1.46,
+          "birthRate": 10.2,
+          "motherAge": 29.9,
+          "flags": {}
+        },
+        {
+          "year": 2014,
+          "tfr": 1.53,
+          "birthRate": 10.4,
+          "motherAge": 29.9,
+          "flags": {}
+        },
+        {
+          "year": 2015,
+          "tfr": 1.57,
+          "birthRate": 10.5,
+          "motherAge": 30,
+          "flags": {}
+        },
+        {
+          "year": 2016,
+          "tfr": 1.63,
+          "birthRate": 10.7,
+          "motherAge": 30,
+          "flags": {}
+        },
+        {
+          "year": 2017,
+          "tfr": 1.69,
+          "birthRate": 10.8,
+          "motherAge": 30,
+          "flags": {}
+        },
+        {
+          "year": 2018,
+          "tfr": 1.71,
+          "birthRate": 10.7,
+          "motherAge": 30.1,
+          "flags": {}
+        },
+        {
+          "year": 2019,
+          "tfr": 1.71,
+          "birthRate": 10.5,
+          "motherAge": 30.2,
+          "flags": {}
+        },
+        {
+          "year": 2020,
+          "tfr": 1.74,
+          "birthRate": 10.3,
+          "motherAge": 30.2,
+          "flags": {
+            "tfr": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2021,
+          "tfr": 1.83,
+          "birthRate": 10.6,
+          "motherAge": 30.4,
+          "flags": {
+            "birthRate": "b"
+          }
+        },
+        {
+          "year": 2022,
+          "tfr": 1.64,
+          "birthRate": 9.5,
+          "motherAge": 30.4,
+          "flags": {}
+        },
+        {
+          "year": 2023,
+          "tfr": 1.46,
+          "birthRate": 8.4,
+          "motherAge": 30.4,
+          "flags": {}
+        },
+        {
+          "year": 2024,
+          "tfr": 1.36,
+          "birthRate": 7.7,
+          "motherAge": 30.5,
+          "flags": {}
+        },
+        {
+          "year": 2025,
+          "tfr": null,
+          "birthRate": 7.1,
+          "motherAge": null,
+          "flags": {}
+        }
+      ]
+    },
+    {
+      "code": "PL",
+      "rows": [
+        {
+          "year": 1960,
+          "tfr": null,
+          "birthRate": 22.6,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1961,
+          "tfr": null,
+          "birthRate": 20.9,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1962,
+          "tfr": null,
+          "birthRate": 19.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1963,
+          "tfr": null,
+          "birthRate": 19.2,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1964,
+          "tfr": null,
+          "birthRate": 18.1,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1965,
+          "tfr": null,
+          "birthRate": 17.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1966,
+          "tfr": null,
+          "birthRate": 16.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1967,
+          "tfr": null,
+          "birthRate": 16.3,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1968,
+          "tfr": null,
+          "birthRate": 16.3,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1969,
+          "tfr": null,
+          "birthRate": 16.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1970,
+          "tfr": null,
+          "birthRate": 16.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1971,
+          "tfr": null,
+          "birthRate": 17.2,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1972,
+          "tfr": null,
+          "birthRate": 17.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1973,
+          "tfr": null,
+          "birthRate": 18,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1974,
+          "tfr": null,
+          "birthRate": 18.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1975,
+          "tfr": null,
+          "birthRate": 19,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1976,
+          "tfr": null,
+          "birthRate": 19.6,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1977,
+          "tfr": null,
+          "birthRate": 19.2,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1978,
+          "tfr": null,
+          "birthRate": 19.1,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1979,
+          "tfr": null,
+          "birthRate": 19.6,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1980,
+          "tfr": null,
+          "birthRate": 19.6,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1981,
+          "tfr": null,
+          "birthRate": 19,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1982,
+          "tfr": null,
+          "birthRate": 19.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1983,
+          "tfr": null,
+          "birthRate": 19.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1984,
+          "tfr": null,
+          "birthRate": 19,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1985,
+          "tfr": null,
+          "birthRate": 18.3,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1986,
+          "tfr": null,
+          "birthRate": 17,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1987,
+          "tfr": null,
+          "birthRate": 16.1,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1988,
+          "tfr": null,
+          "birthRate": 15.6,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1989,
+          "tfr": null,
+          "birthRate": 14.9,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1990,
+          "tfr": 2.06,
+          "birthRate": 14.4,
+          "motherAge": 26.2,
+          "flags": {}
+        },
+        {
+          "year": 1991,
+          "tfr": 2.07,
+          "birthRate": 14.3,
+          "motherAge": 26.3,
+          "flags": {}
+        },
+        {
+          "year": 1992,
+          "tfr": 1.95,
+          "birthRate": 13.4,
+          "motherAge": 26.4,
+          "flags": {}
+        },
+        {
+          "year": 1993,
+          "tfr": 1.87,
+          "birthRate": 12.9,
+          "motherAge": 26.6,
+          "flags": {}
+        },
+        {
+          "year": 1994,
+          "tfr": 1.81,
+          "birthRate": 12.5,
+          "motherAge": 26.8,
+          "flags": {}
+        },
+        {
+          "year": 1995,
+          "tfr": 1.62,
+          "birthRate": 11.2,
+          "motherAge": 26.9,
+          "flags": {}
+        },
+        {
+          "year": 1996,
+          "tfr": 1.59,
+          "birthRate": 11.1,
+          "motherAge": 27,
+          "flags": {}
+        },
+        {
+          "year": 1997,
+          "tfr": 1.51,
+          "birthRate": 10.7,
+          "motherAge": 27.1,
+          "flags": {}
+        },
+        {
+          "year": 1998,
+          "tfr": 1.44,
+          "birthRate": 10.2,
+          "motherAge": 27.2,
+          "flags": {}
+        },
+        {
+          "year": 1999,
+          "tfr": 1.37,
+          "birthRate": 9.9,
+          "motherAge": 27.3,
+          "flags": {}
+        },
+        {
+          "year": 2000,
+          "tfr": 1.37,
+          "birthRate": 9.9,
+          "motherAge": 27.3,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2001,
+          "tfr": 1.31,
+          "birthRate": 9.6,
+          "motherAge": 27.6,
+          "flags": {}
+        },
+        {
+          "year": 2002,
+          "tfr": 1.25,
+          "birthRate": 9.3,
+          "motherAge": 27.7,
+          "flags": {}
+        },
+        {
+          "year": 2003,
+          "tfr": 1.22,
+          "birthRate": 9.2,
+          "motherAge": 27.9,
+          "flags": {}
+        },
+        {
+          "year": 2004,
+          "tfr": 1.23,
+          "birthRate": 9.3,
+          "motherAge": 28,
+          "flags": {}
+        },
+        {
+          "year": 2005,
+          "tfr": 1.24,
+          "birthRate": 9.5,
+          "motherAge": 28.2,
+          "flags": {}
+        },
+        {
+          "year": 2006,
+          "tfr": 1.27,
+          "birthRate": 9.8,
+          "motherAge": 28.3,
+          "flags": {}
+        },
+        {
+          "year": 2007,
+          "tfr": 1.31,
+          "birthRate": 10.2,
+          "motherAge": 28.4,
+          "flags": {}
+        },
+        {
+          "year": 2008,
+          "tfr": 1.39,
+          "birthRate": 10.9,
+          "motherAge": 28.5,
+          "flags": {}
+        },
+        {
+          "year": 2009,
+          "tfr": 1.4,
+          "birthRate": 10.9,
+          "motherAge": 28.6,
+          "flags": {
+            "tfr": "b"
+          }
+        },
+        {
+          "year": 2010,
+          "tfr": 1.41,
+          "birthRate": 10.9,
+          "motherAge": 28.8,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2011,
+          "tfr": 1.33,
+          "birthRate": 10.2,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2012,
+          "tfr": 1.33,
+          "birthRate": 10.1,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2013,
+          "tfr": 1.29,
+          "birthRate": 9.7,
+          "motherAge": 29,
+          "flags": {}
+        },
+        {
+          "year": 2014,
+          "tfr": 1.32,
+          "birthRate": 9.9,
+          "motherAge": 29.1,
+          "flags": {}
+        },
+        {
+          "year": 2015,
+          "tfr": 1.32,
+          "birthRate": 9.7,
+          "motherAge": 29.2,
+          "flags": {
+            "birthRate": "e"
+          }
+        },
+        {
+          "year": 2016,
+          "tfr": 1.39,
+          "birthRate": 10.1,
+          "motherAge": 29.4,
+          "flags": {
+            "birthRate": "e"
+          }
+        },
+        {
+          "year": 2017,
+          "tfr": 1.48,
+          "birthRate": 10.6,
+          "motherAge": 29.5,
+          "flags": {
+            "birthRate": "e"
+          }
+        },
+        {
+          "year": 2018,
+          "tfr": 1.46,
+          "birthRate": 10.2,
+          "motherAge": 29.6,
+          "flags": {
+            "tfr": "e",
+            "birthRate": "be",
+            "motherAge": "e"
+          }
+        },
+        {
+          "year": 2019,
+          "tfr": 1.44,
+          "birthRate": 9.9,
+          "motherAge": 29.7,
+          "flags": {
+            "birthRate": "bep"
+          }
+        },
+        {
+          "year": 2020,
+          "tfr": 1.39,
+          "birthRate": 9.5,
+          "motherAge": 29.8,
+          "flags": {
+            "tfr": "ep",
+            "birthRate": "be",
+            "motherAge": "ep"
+          }
+        },
+        {
+          "year": 2021,
+          "tfr": 1.33,
+          "birthRate": 9,
+          "motherAge": 29.9,
+          "flags": {
+            "tfr": "ep",
+            "birthRate": "b",
+            "motherAge": "ep"
+          }
+        },
+        {
+          "year": 2022,
+          "tfr": 1.29,
+          "birthRate": 8.3,
+          "motherAge": 30,
+          "flags": {
+            "tfr": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2023,
+          "tfr": 1.2,
+          "birthRate": 7.4,
+          "motherAge": 30.1,
+          "flags": {
+            "tfr": "ep",
+            "motherAge": "ep"
+          }
+        },
+        {
+          "year": 2024,
+          "tfr": 1.14,
+          "birthRate": 6.9,
+          "motherAge": 30.3,
+          "flags": {
+            "tfr": "ep",
+            "motherAge": "ep"
+          }
+        },
+        {
+          "year": 2025,
+          "tfr": null,
+          "birthRate": 6.5,
+          "motherAge": null,
+          "flags": {}
+        }
+      ]
+    },
+    {
+      "code": "HU",
+      "rows": [
+        {
+          "year": 1960,
+          "tfr": 2.02,
+          "birthRate": 14.7,
+          "motherAge": 25.8,
+          "flags": {}
+        },
+        {
+          "year": 1961,
+          "tfr": 1.94,
+          "birthRate": 14,
+          "motherAge": 25.7,
+          "flags": {}
+        },
+        {
+          "year": 1962,
+          "tfr": 1.79,
+          "birthRate": 12.9,
+          "motherAge": 25.7,
+          "flags": {}
+        },
+        {
+          "year": 1963,
+          "tfr": 1.82,
+          "birthRate": 13.1,
+          "motherAge": 25.8,
+          "flags": {}
+        },
+        {
+          "year": 1964,
+          "tfr": 1.82,
+          "birthRate": 13.1,
+          "motherAge": 25.7,
+          "flags": {}
+        },
+        {
+          "year": 1965,
+          "tfr": 1.82,
+          "birthRate": 13.1,
+          "motherAge": 25.6,
+          "flags": {}
+        },
+        {
+          "year": 1966,
+          "tfr": 1.89,
+          "birthRate": 13.6,
+          "motherAge": 25.6,
+          "flags": {}
+        },
+        {
+          "year": 1967,
+          "tfr": 2.01,
+          "birthRate": 14.6,
+          "motherAge": 25.6,
+          "flags": {}
+        },
+        {
+          "year": 1968,
+          "tfr": 2.06,
+          "birthRate": 15.1,
+          "motherAge": 25.5,
+          "flags": {}
+        },
+        {
+          "year": 1969,
+          "tfr": 2.04,
+          "birthRate": 15,
+          "motherAge": 25.5,
+          "flags": {}
+        },
+        {
+          "year": 1970,
+          "tfr": 1.98,
+          "birthRate": 14.7,
+          "motherAge": 25.4,
+          "flags": {}
+        },
+        {
+          "year": 1971,
+          "tfr": 1.93,
+          "birthRate": 14.5,
+          "motherAge": 25.4,
+          "flags": {}
+        },
+        {
+          "year": 1972,
+          "tfr": 1.93,
+          "birthRate": 14.7,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1973,
+          "tfr": 1.93,
+          "birthRate": 15,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1974,
+          "tfr": 2.27,
+          "birthRate": 17.8,
+          "motherAge": 25.4,
+          "flags": {}
+        },
+        {
+          "year": 1975,
+          "tfr": 2.35,
+          "birthRate": 18.4,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1976,
+          "tfr": 2.23,
+          "birthRate": 17.5,
+          "motherAge": 25.1,
+          "flags": {}
+        },
+        {
+          "year": 1977,
+          "tfr": 2.15,
+          "birthRate": 16.7,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1978,
+          "tfr": 2.06,
+          "birthRate": 15.7,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1979,
+          "tfr": 2.01,
+          "birthRate": 15,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1980,
+          "tfr": 1.91,
+          "birthRate": 13.9,
+          "motherAge": 24.6,
+          "flags": {}
+        },
+        {
+          "year": 1981,
+          "tfr": 1.88,
+          "birthRate": 13.3,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1982,
+          "tfr": 1.8,
+          "birthRate": 12.5,
+          "motherAge": 24.7,
+          "flags": {}
+        },
+        {
+          "year": 1983,
+          "tfr": 1.75,
+          "birthRate": 11.9,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1984,
+          "tfr": 1.75,
+          "birthRate": 11.8,
+          "motherAge": 24.8,
+          "flags": {}
+        },
+        {
+          "year": 1985,
+          "tfr": 1.85,
+          "birthRate": 12.2,
+          "motherAge": 25,
+          "flags": {}
+        },
+        {
+          "year": 1986,
+          "tfr": 1.84,
+          "birthRate": 12.1,
+          "motherAge": 25.2,
+          "flags": {}
+        },
+        {
+          "year": 1987,
+          "tfr": 1.82,
+          "birthRate": 11.9,
+          "motherAge": 25.3,
+          "flags": {}
+        },
+        {
+          "year": 1988,
+          "tfr": 1.81,
+          "birthRate": 11.7,
+          "motherAge": 25.4,
+          "flags": {}
+        },
+        {
+          "year": 1989,
+          "tfr": 1.82,
+          "birthRate": 11.8,
+          "motherAge": 25.5,
+          "flags": {}
+        },
+        {
+          "year": 1990,
+          "tfr": 1.87,
+          "birthRate": 12.1,
+          "motherAge": 25.6,
+          "flags": {}
+        },
+        {
+          "year": 1991,
+          "tfr": 1.87,
+          "birthRate": 12.3,
+          "motherAge": 25.7,
+          "flags": {}
+        },
+        {
+          "year": 1992,
+          "tfr": 1.77,
+          "birthRate": 11.7,
+          "motherAge": 25.8,
+          "flags": {}
+        },
+        {
+          "year": 1993,
+          "tfr": 1.68,
+          "birthRate": 11.3,
+          "motherAge": 26,
+          "flags": {}
+        },
+        {
+          "year": 1994,
+          "tfr": 1.64,
+          "birthRate": 11.2,
+          "motherAge": 26.2,
+          "flags": {}
+        },
+        {
+          "year": 1995,
+          "tfr": 1.57,
+          "birthRate": 10.8,
+          "motherAge": 26.3,
+          "flags": {}
+        },
+        {
+          "year": 1996,
+          "tfr": 1.46,
+          "birthRate": 10.2,
+          "motherAge": 26.5,
+          "flags": {}
+        },
+        {
+          "year": 1997,
+          "tfr": 1.37,
+          "birthRate": 9.8,
+          "motherAge": 26.6,
+          "flags": {}
+        },
+        {
+          "year": 1998,
+          "tfr": 1.32,
+          "birthRate": 9.5,
+          "motherAge": 26.8,
+          "flags": {}
+        },
+        {
+          "year": 1999,
+          "tfr": 1.28,
+          "birthRate": 9.2,
+          "motherAge": 27,
+          "flags": {}
+        },
+        {
+          "year": 2000,
+          "tfr": 1.32,
+          "birthRate": 9.6,
+          "motherAge": 27.3,
+          "flags": {}
+        },
+        {
+          "year": 2001,
+          "tfr": 1.31,
+          "birthRate": 9.5,
+          "motherAge": 27.6,
+          "flags": {}
+        },
+        {
+          "year": 2002,
+          "tfr": 1.3,
+          "birthRate": 9.5,
+          "motherAge": 27.8,
+          "flags": {}
+        },
+        {
+          "year": 2003,
+          "tfr": 1.27,
+          "birthRate": 9.3,
+          "motherAge": 28,
+          "flags": {}
+        },
+        {
+          "year": 2004,
+          "tfr": 1.28,
+          "birthRate": 9.4,
+          "motherAge": 28.2,
+          "flags": {}
+        },
+        {
+          "year": 2005,
+          "tfr": 1.31,
+          "birthRate": 9.7,
+          "motherAge": 28.4,
+          "flags": {}
+        },
+        {
+          "year": 2006,
+          "tfr": 1.34,
+          "birthRate": 9.9,
+          "motherAge": 28.7,
+          "flags": {}
+        },
+        {
+          "year": 2007,
+          "tfr": 1.32,
+          "birthRate": 9.7,
+          "motherAge": 28.8,
+          "flags": {}
+        },
+        {
+          "year": 2008,
+          "tfr": 1.35,
+          "birthRate": 9.9,
+          "motherAge": 28.9,
+          "flags": {}
+        },
+        {
+          "year": 2009,
+          "tfr": 1.32,
+          "birthRate": 9.6,
+          "motherAge": 29.1,
+          "flags": {}
+        },
+        {
+          "year": 2010,
+          "tfr": 1.25,
+          "birthRate": 9,
+          "motherAge": 29.3,
+          "flags": {}
+        },
+        {
+          "year": 2011,
+          "tfr": 1.23,
+          "birthRate": 8.8,
+          "motherAge": 29.4,
+          "flags": {}
+        },
+        {
+          "year": 2012,
+          "tfr": 1.34,
+          "birthRate": 9.1,
+          "motherAge": 29.4,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2013,
+          "tfr": 1.36,
+          "birthRate": 9.1,
+          "motherAge": 29.4,
+          "flags": {}
+        },
+        {
+          "year": 2014,
+          "tfr": 1.45,
+          "birthRate": 9.5,
+          "motherAge": 29.5,
+          "flags": {}
+        },
+        {
+          "year": 2015,
+          "tfr": 1.46,
+          "birthRate": 9.4,
+          "motherAge": 29.6,
+          "flags": {}
+        },
+        {
+          "year": 2016,
+          "tfr": 1.55,
+          "birthRate": 9.8,
+          "motherAge": 29.6,
+          "flags": {}
+        },
+        {
+          "year": 2017,
+          "tfr": 1.56,
+          "birthRate": 9.7,
+          "motherAge": 29.7,
+          "flags": {}
+        },
+        {
+          "year": 2018,
+          "tfr": 1.57,
+          "birthRate": 9.6,
+          "motherAge": 29.8,
+          "flags": {}
+        },
+        {
+          "year": 2019,
+          "tfr": 1.58,
+          "birthRate": 9.6,
+          "motherAge": 29.8,
+          "flags": {}
+        },
+        {
+          "year": 2020,
+          "tfr": 1.61,
+          "birthRate": 9.7,
+          "motherAge": 29.8,
+          "flags": {}
+        },
+        {
+          "year": 2021,
+          "tfr": 1.63,
+          "birthRate": 9.8,
+          "motherAge": 29.9,
+          "flags": {}
+        },
+        {
+          "year": 2022,
+          "tfr": 1.57,
+          "birthRate": 9.3,
+          "motherAge": 30,
+          "flags": {}
+        },
+        {
+          "year": 2023,
+          "tfr": 1.55,
+          "birthRate": 9.1,
+          "motherAge": 30.2,
+          "flags": {}
+        },
+        {
+          "year": 2024,
+          "tfr": 1.41,
+          "birthRate": 8.2,
+          "motherAge": 30.2,
+          "flags": {}
+        },
+        {
+          "year": 2025,
+          "tfr": null,
+          "birthRate": 7.7,
+          "motherAge": null,
+          "flags": {}
+        }
+      ]
+    },
+    {
+      "code": "EU27_2020",
+      "rows": [
+        {
+          "year": 1960,
+          "tfr": null,
+          "birthRate": null,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1961,
+          "tfr": null,
+          "birthRate": 18.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1962,
+          "tfr": null,
+          "birthRate": 18.2,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1963,
+          "tfr": null,
+          "birthRate": 18.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1964,
+          "tfr": null,
+          "birthRate": 18.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1965,
+          "tfr": null,
+          "birthRate": 17.9,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1966,
+          "tfr": null,
+          "birthRate": 17.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1967,
+          "tfr": null,
+          "birthRate": 17.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1968,
+          "tfr": null,
+          "birthRate": 17.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1969,
+          "tfr": null,
+          "birthRate": 16.9,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1970,
+          "tfr": null,
+          "birthRate": 16.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1971,
+          "tfr": null,
+          "birthRate": 16.3,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1972,
+          "tfr": null,
+          "birthRate": 15.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1973,
+          "tfr": null,
+          "birthRate": 15.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1974,
+          "tfr": null,
+          "birthRate": 15.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1975,
+          "tfr": null,
+          "birthRate": 15,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1976,
+          "tfr": null,
+          "birthRate": 14.9,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1977,
+          "tfr": null,
+          "birthRate": 14.6,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1978,
+          "tfr": null,
+          "birthRate": 14.3,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1979,
+          "tfr": null,
+          "birthRate": 14.2,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1980,
+          "tfr": null,
+          "birthRate": 14.1,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1981,
+          "tfr": null,
+          "birthRate": 13.7,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1982,
+          "tfr": null,
+          "birthRate": 13.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1983,
+          "tfr": null,
+          "birthRate": 13,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1984,
+          "tfr": null,
+          "birthRate": 12.9,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1985,
+          "tfr": null,
+          "birthRate": 12.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1986,
+          "tfr": null,
+          "birthRate": 12.7,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1987,
+          "tfr": null,
+          "birthRate": 12.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1988,
+          "tfr": null,
+          "birthRate": 12.6,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1989,
+          "tfr": null,
+          "birthRate": 12.3,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1990,
+          "tfr": null,
+          "birthRate": 12.2,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1991,
+          "tfr": null,
+          "birthRate": 11.8,
+          "motherAge": null,
+          "flags": {
+            "birthRate": "b"
+          }
+        },
+        {
+          "year": 1992,
+          "tfr": null,
+          "birthRate": 11.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1993,
+          "tfr": null,
+          "birthRate": 11.1,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1994,
+          "tfr": null,
+          "birthRate": 10.8,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1995,
+          "tfr": null,
+          "birthRate": 10.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1996,
+          "tfr": null,
+          "birthRate": 10.5,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1997,
+          "tfr": null,
+          "birthRate": 10.4,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 1998,
+          "tfr": null,
+          "birthRate": 10.3,
+          "motherAge": null,
+          "flags": {
+            "birthRate": "b"
+          }
+        },
+        {
+          "year": 1999,
+          "tfr": null,
+          "birthRate": 10.3,
+          "motherAge": null,
+          "flags": {}
+        },
+        {
+          "year": 2000,
+          "tfr": null,
+          "birthRate": 10.5,
+          "motherAge": null,
+          "flags": {
+            "birthRate": "be"
+          }
+        },
+        {
+          "year": 2001,
+          "tfr": 1.43,
+          "birthRate": 10.2,
+          "motherAge": 29,
+          "flags": {
+            "birthRate": "b"
+          }
+        },
+        {
+          "year": 2002,
+          "tfr": 1.43,
+          "birthRate": 10.1,
+          "motherAge": 29.2,
+          "flags": {}
+        },
+        {
+          "year": 2003,
+          "tfr": 1.44,
+          "birthRate": 10.1,
+          "motherAge": 29.3,
+          "flags": {}
+        },
+        {
+          "year": 2004,
+          "tfr": 1.46,
+          "birthRate": 10.2,
+          "motherAge": 29.4,
+          "flags": {}
+        },
+        {
+          "year": 2005,
+          "tfr": 1.47,
+          "birthRate": 10.2,
+          "motherAge": 29.5,
+          "flags": {}
+        },
+        {
+          "year": 2006,
+          "tfr": 1.5,
+          "birthRate": 10.3,
+          "motherAge": 29.6,
+          "flags": {}
+        },
+        {
+          "year": 2007,
+          "tfr": 1.52,
+          "birthRate": 10.4,
+          "motherAge": 29.7,
+          "flags": {
+            "birthRate": "b"
+          }
+        },
+        {
+          "year": 2008,
+          "tfr": 1.57,
+          "birthRate": 10.6,
+          "motherAge": 29.8,
+          "flags": {
+            "birthRate": "b"
+          }
+        },
+        {
+          "year": 2009,
+          "tfr": 1.56,
+          "birthRate": 10.5,
+          "motherAge": 29.9,
+          "flags": {}
+        },
+        {
+          "year": 2010,
+          "tfr": 1.57,
+          "birthRate": 10.4,
+          "motherAge": 30,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2011,
+          "tfr": 1.54,
+          "birthRate": 10.1,
+          "motherAge": 30.2,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2012,
+          "tfr": 1.54,
+          "birthRate": 10,
+          "motherAge": 30.2,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "b",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2013,
+          "tfr": 1.51,
+          "birthRate": 9.7,
+          "motherAge": 30.3,
+          "flags": {
+            "birthRate": "be"
+          }
+        },
+        {
+          "year": 2014,
+          "tfr": 1.54,
+          "birthRate": 9.9,
+          "motherAge": 30.4,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "be",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2015,
+          "tfr": 1.54,
+          "birthRate": 9.8,
+          "motherAge": 30.5,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "bep",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2016,
+          "tfr": 1.57,
+          "birthRate": 9.9,
+          "motherAge": 30.6,
+          "flags": {
+            "birthRate": "e"
+          }
+        },
+        {
+          "year": 2017,
+          "tfr": 1.56,
+          "birthRate": 9.7,
+          "motherAge": 30.7,
+          "flags": {
+            "tfr": "b",
+            "birthRate": "be",
+            "motherAge": "b"
+          }
+        },
+        {
+          "year": 2018,
+          "tfr": 1.54,
+          "birthRate": 9.5,
+          "motherAge": 30.8,
+          "flags": {
+            "tfr": "ep",
+            "birthRate": "be",
+            "motherAge": "ep"
+          }
+        },
+        {
+          "year": 2019,
+          "tfr": 1.53,
+          "birthRate": 9.3,
+          "motherAge": 30.9,
+          "flags": {
+            "tfr": "bep",
+            "birthRate": "bep",
+            "motherAge": "bep"
+          }
+        },
+        {
+          "year": 2020,
+          "tfr": 1.51,
+          "birthRate": 9.1,
+          "motherAge": 30.9,
+          "flags": {
+            "tfr": "bep",
+            "birthRate": "be",
+            "motherAge": "bep"
+          }
+        },
+        {
+          "year": 2021,
+          "tfr": 1.53,
+          "birthRate": 9.2,
+          "motherAge": 31.1,
+          "flags": {
+            "tfr": "ep",
+            "birthRate": "be",
+            "motherAge": "ep"
+          }
+        },
+        {
+          "year": 2022,
+          "tfr": 1.46,
+          "birthRate": 8.7,
+          "motherAge": 31.1,
+          "flags": {
+            "tfr": "bep",
+            "birthRate": "be",
+            "motherAge": "bep"
+          }
+        },
+        {
+          "year": 2023,
+          "tfr": 1.38,
+          "birthRate": 8.2,
+          "motherAge": 31.2,
+          "flags": {
+            "tfr": "bep",
+            "birthRate": "bep",
+            "motherAge": "bep"
+          }
+        },
+        {
+          "year": 2024,
+          "tfr": 1.34,
+          "birthRate": 7.9,
+          "motherAge": 31.3,
+          "flags": {
+            "tfr": "ep",
+            "birthRate": "ep",
+            "motherAge": "ep"
+          }
+        },
+        {
+          "year": 2025,
+          "tfr": null,
+          "birthRate": 7.7,
+          "motherAge": null,
+          "flags": {
+            "birthRate": "ep"
+          }
+        }
+      ]
+    }
+  ]
+}

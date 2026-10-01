@@ -62,6 +62,13 @@ Konvencie: komponenty sú malé `styled` (Emotion) bloky, farby idú cez CSS pre
 - Pozor na lokalitu: PowerShell na slovenskom systéme vypisuje desatinné čísla s čiarkou. Pri generovaní TS/JSON používaj Node alebo invariantnú kultúru, aby v súbore boli desatinné bodky.
 - V pätičke stránky musí ostať uvedený zdroj a dátum stiahnutia. Pri aktualizácii dát ich zmeň.
 
+### Porovnanie krajín (R1)
+
+- `npm run data:countries` stiahne 15 ročných radov (SK, CZ, PL, HU, EU27_2020; TFR, hrubá miera, vek matky) do `src/data/countries.json`. Node 22, iba štandardná knižnica. Pri rovnakých dátach a metadátach zachová dátum snapshotu.
+- `npm run test:data-import` overí parsovanie JSON-stat, chýbajúce hodnoty a odmietnutie nejednoznačných radov.
+- Snapshot uchováva URL, aktualizáciu zdroja aj príznaky Eurostatu. Zobrazenie zachováva `null` ako medzeru a porovnáva hodnoty v najnovšom spoločnom roku vybraných krajín. EÚ je zdrojový agregát Eurostatu, nie aritmetický priemer zobrazených krajín.
+- `src/components/CountryComparison.tsx` obsahuje graf, prepínače a prístupnú tabuľku. Údaje za behu stránky zostávajú statické.
+
 ## 5. Pipeline: GitHub → Vercel
 
 Nasadenie je plne automatické z GitHubu (Vercel Git integrácia, produkčná vetva `main`). Nikdy nenasadzuj ručne cez Vercel CLI/dashboard.
