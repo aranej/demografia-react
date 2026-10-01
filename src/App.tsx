@@ -4,6 +4,8 @@ import StatTile from './components/StatTile';
 import MetricExplorer from './components/MetricExplorer';
 import NaturalChange from './components/NaturalChange';
 import Eras from './components/Eras';
+import CountryComparison from './components/CountryComparison';
+import { countryDownloadedOn } from './data/countries';
 import {
   nf,
   dec,
@@ -169,6 +171,9 @@ const App: React.FC = () => (
       <SectionTitle>Preskúmaj ukazovatele</SectionTitle>
       <MetricExplorer />
 
+      <SectionTitle>Slovensko v európskom kontexte</SectionTitle>
+      <CountryComparison />
+
       <NaturalChange />
 
       <SectionTitle>Šesť období</SectionTitle>
@@ -183,6 +188,12 @@ const App: React.FC = () => (
         <div>
           TFR = celková plodnosť, priemerný počet detí na ženu pri dnešných vekových mierach plodnosti. Hrubá miera
           pôrodnosti = živonarodení na 1 000 obyvateľov.
+        </div>
+        <div>
+          Porovnanie krajín: Eurostat, <code>demo_find</code> a <code>demo_gind</code>, údaje stiahnuté{' '}
+          {new Date(countryDownloadedOn + 'T12:00:00Z').toLocaleDateString('sk-SK', { timeZone: 'Europe/Bratislava' })}.
+          EÚ = agregát 27 členských štátov (<code>EU27_2020</code>). Odhady, predbežné údaje a zlomy
+          v časových radoch sú označené v tabuľke a v detaile grafu.
         </div>
       </Footer>
     </Wrap>

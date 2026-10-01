@@ -26,7 +26,7 @@ Stavy: `TODO` · `IN PROGRESS` · `DONE` · `BLOCKED` (s dôvodom).
 
 | ID | Položka | Priorita | Stav |
 |---|---|---|---|
-| R1 | Porovnanie krajín | P1 | TODO |
+| R1 | Porovnanie krajín | P1 | IN PROGRESS |
 | R2 | Automatická aktualizácia dát (GitHub Action) | P1 | TODO |
 | R3 | Narodení podľa veku matky | P2 | TODO |
 | R4 | Populačná pyramída po rokoch | P2 | TODO |
